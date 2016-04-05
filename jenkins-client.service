@@ -1,0 +1,10 @@
+[Unit]
+Description=Jenkins Client
+After=jenkins.service
+Requires=jenkins.service
+
+[Service]
+ExecStart=/usr/bin/node /opt/jenkins-client/server.express.js
+
+[Install]
+WantedBy=multi-user.target
